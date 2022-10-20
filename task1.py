@@ -28,6 +28,7 @@ def task1():
     print("Симетрична різниця: " + str(symmetricalDifference(A, B)))
     print("Декартовий добуток: ", str(decart(A, B)))
     subset()
+    print("Перевірка на рівність множин: ", check(A,B))
     print("Переведена множини А в бітові рядки: ", transfer(A, U))
     print("Переведена множини B в бітові рядки: ", transfer1(B, U))
     print("Обєднання множин: ", associationBits(transfer(A, U), transfer1(B, U)))
@@ -44,6 +45,8 @@ def add(A, B):
     for j in A:
         c.append(j)
     return c
+
+
 # elements of the set that are in three sets
 
 def intersiction(A, B):
@@ -109,6 +112,14 @@ def subset():
         print("Множина A є підмножиною B")
     else:
         print("Множина A не є підмножиною B")
+
+
+def check(A, B):
+    for i in A:
+        if i not in B:
+            return False
+
+    return True
 
 
 def transfer(A, U):

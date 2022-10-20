@@ -156,7 +156,7 @@ def intersectionBits(bita, bitb):
     for i in range(8):
         val = str(int(bita[i]) & int(bitb[i]))
         if val == "1":
-            arr.append(i + 1);
+            arr.append(i + 1)
     return arr
 
 
@@ -174,7 +174,7 @@ def symmetricDifferenceBits(bita, bitb):
     for i in range(8):
         val = str(~int(bita[i]) & int(bitb[i]) | int(bita[i]) & ~int(bitb[i]))
         if val == "1":
-            arr.append(i + 1);
+            arr.append(i + 1)
     return arr
 
 
